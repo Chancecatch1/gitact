@@ -4,10 +4,10 @@ name: Unit Test
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   test:
@@ -28,9 +28,8 @@ jobs:
         - name: Install dependencies
           run: |
             python -m pip install --upgrade pip
-            pip install -r requirement.txt
+            pip install -r requirements.txt
 
         # Step 4: Run tests
         - name: Run tests
           run: pytest
-            
